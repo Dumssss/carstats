@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+h1 span {
+  background: linear-gradient(45deg, #131086, #b621f3);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(45deg, #131086, #b621f3);
+  padding: 40px;
+}
+
+.container {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.data {
+  padding-left: 8%;
+  padding-bottom: 50%;
+  padding-right: 20%;
+}
+
+.data table {
+  text-align: center;
+  justify-content: space-between;
+}
+
+.data table th + th {
+  border-left: 1px solid #131086;
+}
+
+.data table td + td {
+  border-left: 1px solid #131086;
+}
+
+/* RESPONSIVE PART *//*# sourceMappingURL=search.css.map */
