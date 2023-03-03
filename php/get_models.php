@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 $dbname = "carstats";
 // Récupérer la valeur de la première liste déroulante à partir des paramètres de requête GET
-$brand = $_GET['brand'];
+$brand = $_POST['brand'];
 
 // Récupération des valeurs
 
@@ -17,8 +17,8 @@ if ($conn->connect_error) {
 }
 
 // Récupérer les modèles pour la marque sélectionnée
-if(isset($_GET['brand'])) {
-    $brand = $_GET['brand'];
+if(isset($_POST['brand'])) {
+    $brand = $_POST['brand'];
     $models_query = "SELECT nomM FROM `models` WHERE nomB='$brand'";
     $models_query_result = mysqli_query($conn, $models_query);
     
