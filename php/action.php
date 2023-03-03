@@ -14,7 +14,7 @@
 
 // /**Configuration des variables du login */
 $email = $_GET['email'];
-$password = $_GET['password'];
+$user_password = $_GET['password'];
 
 // /**Configuration des variables de la BD */
 $servername = "localhost:3307";
@@ -32,7 +32,7 @@ if ($conn->connect_error) {
 } else {
   $stmt = $conn->prepare("insert ignore into registration(email, password)
             values(?, ?)");
-  $stmt->bind_param("ss", $email, $password);
+  $stmt->bind_param("ss", $email, $user_password);
   $stmt->execute();
   echo "<h1><span>CarsStats</span></h1>";
   $stmt->close();
