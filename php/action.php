@@ -13,8 +13,8 @@
 <?php
 
 // /**Configuration des variables du login */
-$email = $_GET['email'];
-$user_password = $_GET['password'];
+$email = $_POST['email'];
+$user_password = $_POST['password'];
 
 // /**Configuration des variables de la BD */
 $servername = "localhost:3307";
