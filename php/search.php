@@ -20,11 +20,11 @@
             $password = "";
             $dbname = "carstats";
             // Vérifier si les valeurs des listes déroulantes ont été soumises
-            if (isset($_GET['brand']) && isset($_GET['model'])) {
+            if (isset($_POST['brand']) && isset($_POST['model'])) {
 
                 // Récupérer les valeurs des listes déroulantes
-                $brand = $_GET['brand'];
-                $model = $_GET['model'];
+                $brand = $_POST['brand'];
+                $model = $_POST['model'];
 
                 // Se connecter à la base de données
                 $conn = new mysqli($servername, $username, $password, $dbname);
